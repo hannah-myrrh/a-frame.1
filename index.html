@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>A-Frame Starter Scene</title>
+
+  <!-- A-Frame -->
+  <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/main.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <a-scene>
+
+    <!-- ASSET MANAGEMENT -->
+    <a-assets>
+
+      <!-- Brick wall textures -->
+      <img id="brickDiff" src="assets/textures/brick/broken_brick_wall_diff.jpg">
+      <img id="brickNorm" src="assets/textures/brick/broken_brick_wall_norm.jpg">
+      <img id="brickRough" src="assets/textures/brick/broken_brick_wall_rough.jpg">
+
+      <!-- Metal textures -->
+      <img id="metalDiff" src="assets/textures/metal/Metal049C_1K-JPG_Color.jpg">
+      <img id="metalNorm" src="assets/textures/metal/Metal049C_1K-JPG_Normal.jpg">
+      <img id="metalRough" src="assets/textures/metal/Metal049C_1K-JPG_Roughness.jpg">
+
+      <!-- Rusty grid textures -->
+      <img id="rustDiff" src="assets/textures/rusty-grid/rusty_metal_grid_4k_diff.jpg">
+      <img id="rustNorm" src="assets/textures/rusty-grid/rusty_metal_grid_4k_norm.jpg">
+      <img id="rustRough" src="assets/textures/rusty-grid/rusty_metal_grid_4k_rough.jpg">
+
+    </a-assets>
+
+    <!-- SKY -->
+    <a-sky color="#222"></a-sky>
+
+    <!-- EXAMPLE OBJECTS USING YOUR TEXTURES -->
+
+    <!-- Brick wall box -->
+    <a-box
+      position="-2 1.2 -4"
+      depth="1" height="2" width="2"
+      material="src: #brickDiff; normalMap: #brickNorm; roughnessMap: #brickRough"
+      spin
+    ></a-box>
+
+    <!-- Metal box -->
+    <a-box
+      position="0 1.2 -4"
+      depth="1" height="2" width="1"
+      material="src: #metalDiff; normalMap: #metalNorm; roughnessMap: #metalRough"
+    ></a-box>
+
+    <!-- Rusty grid box -->
+    <a-box
+      position="2 1.2 -4"
+      depth="1" height="2" width="2"
+      material="src: #rustDiff; normalMap: #rustNorm; roughnessMap: #rustRough"
+    ></a-box>
+
+    <!-- Camera -->
+    <a-entity camera position="0 1.6 0"></a-entity>
+
+  </a-scene>
+</body>
+</html>
